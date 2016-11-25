@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="图床" customModuleProvider="target">
             <connections>
                 <outlet property="statusMenu" destination="RTR-Xu-1hv" id="nTj-pw-Q7G"/>
+                <outlet property="uploadMenuItem" destination="LVH-r4-Ziq" id="U6f-BJ-bTw"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>

@@ -13,6 +13,8 @@
 		8860F0691DE8050300D9CD01 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F0681DE8050300D9CD01 /* GeneralViewController.swift */; };
 		8860F06D1DE8082A00D9CD01 /* ImagePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8860F06C1DE8082A00D9CD01 /* ImagePreferencesViewController.xib */; };
 		8860F06F1DE8369700D9CD01 /* GeneralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8860F06E1DE8369700D9CD01 /* GeneralViewController.xib */; };
+		8860F0711DE841A800D9CD01 /* PasteboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F0701DE841A800D9CD01 /* PasteboardObserver.swift */; };
+		8860F0731DE846C600D9CD01 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F0721DE846C600D9CD01 /* AppHelper.swift */; };
 		88D61AC21DE7FAB500B3532E /* ImagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D61AC11DE7FAB500B3532E /* ImagePreferencesViewController.swift */; };
 		BE527B349F7B08679D936010 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A70FBBAF352AB1870D1DEC /* Pods___.framework */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,8 @@
 		8860F0681DE8050300D9CD01 /* GeneralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		8860F06C1DE8082A00D9CD01 /* ImagePreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePreferencesViewController.xib; sourceTree = "<group>"; };
 		8860F06E1DE8369700D9CD01 /* GeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralViewController.xib; sourceTree = "<group>"; };
+		8860F0701DE841A800D9CD01 /* PasteboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardObserver.swift; sourceTree = "<group>"; };
+		8860F0721DE846C600D9CD01 /* AppHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
 		88D61AC11DE7FAB500B3532E /* ImagePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreferencesViewController.swift; sourceTree = "<group>"; };
 		D28CC84E54D66F4C7D5821CA /* Pods-图床.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-图床.debug.xcconfig"; path = "Pods/Target Support Files/Pods-图床/Pods-图床.debug.xcconfig"; sourceTree = "<group>"; };
 		D3A70FBBAF352AB1870D1DEC /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,8 @@
 				8860F06C1DE8082A00D9CD01 /* ImagePreferencesViewController.xib */,
 				8860F0681DE8050300D9CD01 /* GeneralViewController.swift */,
 				8860F06E1DE8369700D9CD01 /* GeneralViewController.xib */,
+				8860F0701DE841A800D9CD01 /* PasteboardObserver.swift */,
+				8860F0721DE846C600D9CD01 /* AppHelper.swift */,
 			);
 			path = Tuchuang;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8860F0731DE846C600D9CD01 /* AppHelper.swift in Sources */,
+				8860F0711DE841A800D9CD01 /* PasteboardObserver.swift in Sources */,
 				8860F0691DE8050300D9CD01 /* GeneralViewController.swift in Sources */,
 				8832C9C21DE7D26400679FC7 /* AppDelegate.swift in Sources */,
 				88D61AC21DE7FAB500B3532E /* ImagePreferencesViewController.swift in Sources */,

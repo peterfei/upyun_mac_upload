@@ -13,11 +13,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1829087686CBD3008EFBDCE6 /* Pods-图床.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-图床.release.xcconfig"; path = "Pods/Target Support Files/Pods-图床/Pods-图床.release.xcconfig"; sourceTree = "<group>"; };
 		8832C9BE1DE7D26400679FC7 /* 图床.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图床.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8832C9C11DE7D26400679FC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8832C9C31DE7D26400679FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8832C9C61DE7D26400679FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8832C9C81DE7D26400679FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9747A82FC13AB8CC2419018F /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28CC84E54D66F4C7D5821CA /* Pods-图床.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-图床.debug.xcconfig"; path = "Pods/Target Support Files/Pods-图床/Pods-图床.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,11 +34,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4317795406DB782B0E03F128 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D28CC84E54D66F4C7D5821CA /* Pods-图床.debug.xcconfig */,
+				1829087686CBD3008EFBDCE6 /* Pods-图床.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8832C9B51DE7D26400679FC7 = {
 			isa = PBXGroup;
 			children = (
 				8832C9C01DE7D26400679FC7 /* Tuchuang */,
 				8832C9BF1DE7D26400679FC7 /* Products */,
+				4317795406DB782B0E03F128 /* Pods */,
+				97FBCF975C89AD92DD8A2534 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +70,14 @@
 				8832C9C81DE7D26400679FC7 /* Info.plist */,
 			);
 			path = Tuchuang;
+			sourceTree = "<group>";
+		};
+		97FBCF975C89AD92DD8A2534 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9747A82FC13AB8CC2419018F /* Pods___.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -222,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -230,6 +252,7 @@
 		};
 		8832C9CC1DE7D26400679FC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28CC84E54D66F4C7D5821CA /* Pods-图床.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -243,6 +266,7 @@
 		};
 		8832C9CD1DE7D26400679FC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1829087686CBD3008EFBDCE6 /* Pods-图床.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -273,6 +297,7 @@
 				8832C9CD1DE7D26400679FC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

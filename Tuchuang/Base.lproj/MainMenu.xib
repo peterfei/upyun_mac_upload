@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
@@ -11,8 +12,9 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Tuchuang" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="图床" customModuleProvider="target">
             <connections>
+                <outlet property="statusMenu" destination="RTR-Xu-1hv" id="nTj-pw-Q7G"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -676,5 +678,27 @@
                 <autoresizingMask key="autoresizingMask"/>
             </view>
         </window>
+        <menu id="RTR-Xu-1hv">
+            <items>
+                <menuItem title="上传" tag="1" keyEquivalent="u" id="LVH-r4-Ziq">
+                    <connections>
+                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="cV4-mn-ZTZ"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="设置" tag="2" id="bfx-D8-N40">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="AHW-F9-Ao7"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="退出" tag="3" id="DU8-5o-6we">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="qL8-4A-UAX"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="116.5" y="491.5"/>
+        </menu>
     </objects>
 </document>

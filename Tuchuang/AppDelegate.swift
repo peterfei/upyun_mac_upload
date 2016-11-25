@@ -15,7 +15,7 @@ var statusItem: NSStatusItem!
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-
+    @IBOutlet weak var statusMenu: NSMenu!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
@@ -26,13 +26,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let iconImage = NSImage(named: "StatusIcon")
         iconImage?.template = true
         statusItem.button?.image = iconImage
+        statusItem.button?.action = #selector(showMenu)
         statusItem.button?.target = self
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
+    func showMenu() {
+        statusItem.popUpStatusItemMenu(statusMenu)
+    }
+    @IBAction func statusMenuClicked(sender: NSMenuItem) {
+        switch sender.tag{
+        case 1:
+            break
+        case 2:
+            break
+        case 3:
+            // 退出
+            NSApp.terminate(nil)
+        default:
+            break
+        
+        }
+    }
 
-
+    
 }
 

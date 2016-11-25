@@ -13,7 +13,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8832C9BE1DE7D26400679FC7 /* Tuchuang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuchuang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8832C9BE1DE7D26400679FC7 /* 图床.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图床.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8832C9C11DE7D26400679FC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8832C9C31DE7D26400679FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8832C9C61DE7D26400679FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		8832C9BF1DE7D26400679FC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8832C9BE1DE7D26400679FC7 /* Tuchuang.app */,
+				8832C9BE1DE7D26400679FC7 /* 图床.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8832C9BD1DE7D26400679FC7 /* Tuchuang */ = {
+		8832C9BD1DE7D26400679FC7 /* 图床 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8832C9CB1DE7D26400679FC7 /* Build configuration list for PBXNativeTarget "Tuchuang" */;
+			buildConfigurationList = 8832C9CB1DE7D26400679FC7 /* Build configuration list for PBXNativeTarget "图床" */;
 			buildPhases = (
 				8832C9BA1DE7D26400679FC7 /* Sources */,
 				8832C9BB1DE7D26400679FC7 /* Frameworks */,
@@ -73,9 +73,9 @@
 			);
 			dependencies = (
 			);
-			name = Tuchuang;
+			name = "图床";
 			productName = Tuchuang;
-			productReference = 8832C9BE1DE7D26400679FC7 /* Tuchuang.app */;
+			productReference = 8832C9BE1DE7D26400679FC7 /* 图床.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -93,7 +93,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8832C9B91DE7D26400679FC7 /* Build configuration list for PBXProject "Tuchuang" */;
+			buildConfigurationList = 8832C9B91DE7D26400679FC7 /* Build configuration list for PBXProject "图床" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -106,7 +106,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8832C9BD1DE7D26400679FC7 /* Tuchuang */,
+				8832C9BD1DE7D26400679FC7 /* 图床 */,
 			);
 		};
 /* End PBXProject section */
@@ -235,8 +235,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tuchuang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterfei.Tuchuang;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "图床";
 			};
 			name = Debug;
 		};
@@ -247,15 +248,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tuchuang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterfei.Tuchuang;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "图床";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8832C9B91DE7D26400679FC7 /* Build configuration list for PBXProject "Tuchuang" */ = {
+		8832C9B91DE7D26400679FC7 /* Build configuration list for PBXProject "图床" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8832C9C91DE7D26400679FC7 /* Debug */,
@@ -264,7 +266,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8832C9CB1DE7D26400679FC7 /* Build configuration list for PBXNativeTarget "Tuchuang" */ = {
+		8832C9CB1DE7D26400679FC7 /* Build configuration list for PBXNativeTarget "图床" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8832C9CC1DE7D26400679FC7 /* Debug */,

@@ -7,7 +7,9 @@
 //
 
 import Cocoa
-
+import MASPreferences
+import TMCache
+import Carbon
 var appDelegate: NSObject?
 var statusItem: NSStatusItem!
 
@@ -16,9 +18,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
-
+    
+    lazy var preferencesWindowController: NSWindowController = {
+        
+        let imageViewController = ImagePreferencesViewController()
+        let generalViewController = GeneralViewController()
+        let controllers = [generalViewController, imageViewController]
+        let wc = MASPreferencesWindowController(viewControllers: controllers, title: "设置")
+        imageViewController.window = wc.window
+        return wc
+    }()
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        window.center()
         appDelegate = self
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSSquareStatusItemLength)
 //        let statusBarButton = DragDestinationView(frame: (statusItem.button?.bounds)!)
@@ -41,7 +53,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         case 1:
             break
         case 2:
-            break
+            // 设置
+            print("click preferencesWindow")
+            preferencesWindowController.showWindow(nil)
+            preferencesWindowController.window?.center()
+            NSApp.activateIgnoringOtherApps(true)
         case 3:
             // 退出
             NSApp.terminate(nil)

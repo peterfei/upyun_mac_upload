@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralViewController" customModule="图床" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="c22-O7-iKe" id="Izn-6l-K8Z"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="263"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-l8-bbC">
+                    <rect key="frame" x="165" y="214" width="43" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="支持我" id="bab-hd-Fp6">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9C-TT-oJq">
+                    <rect key="frame" x="118" y="38" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Wrt-HQ-lrq"/>
+                        <constraint firstAttribute="height" constant="150" id="ePe-Hp-34O"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="90343Slice 1" id="OTl-X4-pUB"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="f9C-TT-oJq" firstAttribute="top" secondItem="ggr-l8-bbC" secondAttribute="bottom" constant="20" id="5X0-0o-EFj"/>
+            </constraints>
+            <point key="canvasLocation" x="312.5" y="246.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="90343Slice 1" width="128" height="128"/>
+    </resources>
+</document>

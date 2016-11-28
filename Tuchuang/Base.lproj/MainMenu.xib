@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="图床" customModuleProvider="target">
             <connections>
+                <outlet property="autoUpItem" destination="8EI-LJ-pOz" id="oWn-Wq-Otm"/>
                 <outlet property="statusMenu" destination="RTR-Xu-1hv" id="nTj-pw-Q7G"/>
                 <outlet property="uploadMenuItem" destination="LVH-r4-Ziq" id="U6f-BJ-bTw"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
@@ -691,6 +692,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="AHW-F9-Ao7"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="自动上传" tag="4" id="8EI-LJ-pOz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="zc6-As-KHf"/>
                     </connections>
                 </menuItem>
                 <menuItem title="退出" tag="3" id="DU8-5o-6we">

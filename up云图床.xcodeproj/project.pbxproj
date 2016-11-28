@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1829087686CBD3008EFBDCE6 /* Pods-图床.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-图床.release.xcconfig"; path = "Pods/Target Support Files/Pods-图床/Pods-图床.release.xcconfig"; sourceTree = "<group>"; };
-		8832C9BE1DE7D26400679FC7 /* 图床.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图床.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8832C9BE1DE7D26400679FC7 /* up云图床.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "up云图床.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8832C9C11DE7D26400679FC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8832C9C31DE7D26400679FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8832C9C61DE7D26400679FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		8832C9BF1DE7D26400679FC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8832C9BE1DE7D26400679FC7 /* 图床.app */,
+				8832C9BE1DE7D26400679FC7 /* up云图床.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8832C9BD1DE7D26400679FC7 /* 图床 */ = {
+		8832C9BD1DE7D26400679FC7 /* up云图床 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8832C9CB1DE7D26400679FC7 /* Build configuration list for PBXNativeTarget "图床" */;
+			buildConfigurationList = 8832C9CB1DE7D26400679FC7 /* Build configuration list for PBXNativeTarget "up云图床" */;
 			buildPhases = (
 				BA2959BD80378AE9DCBBA7BF /* [CP] Check Pods Manifest.lock */,
 				8832C9BA1DE7D26400679FC7 /* Sources */,
@@ -141,9 +141,9 @@
 			);
 			dependencies = (
 			);
-			name = "图床";
+			name = "up云图床";
 			productName = Tuchuang;
-			productReference = 8832C9BE1DE7D26400679FC7 /* 图床.app */;
+			productReference = 8832C9BE1DE7D26400679FC7 /* up云图床.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8832C9B91DE7D26400679FC7 /* Build configuration list for PBXProject "图床" */;
+			buildConfigurationList = 8832C9B91DE7D26400679FC7 /* Build configuration list for PBXProject "up云图床" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -174,7 +174,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8832C9BD1DE7D26400679FC7 /* 图床 */,
+				8832C9BD1DE7D26400679FC7 /* up云图床 */,
 			);
 		};
 /* End PBXProject section */
@@ -365,7 +365,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterfei.Tuchuang;
-				PRODUCT_NAME = "图床";
+				PRODUCT_NAME = "up云图床";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 			};
 			name = Debug;
@@ -380,7 +380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterfei.Tuchuang;
-				PRODUCT_NAME = "图床";
+				PRODUCT_NAME = "up云图床";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 			};
 			name = Release;
@@ -388,7 +388,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8832C9B91DE7D26400679FC7 /* Build configuration list for PBXProject "图床" */ = {
+		8832C9B91DE7D26400679FC7 /* Build configuration list for PBXProject "up云图床" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8832C9C91DE7D26400679FC7 /* Debug */,
@@ -397,7 +397,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8832C9CB1DE7D26400679FC7 /* Build configuration list for PBXNativeTarget "图床" */ = {
+		8832C9CB1DE7D26400679FC7 /* Build configuration list for PBXNativeTarget "up云图床" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8832C9CC1DE7D26400679FC7 /* Debug */,

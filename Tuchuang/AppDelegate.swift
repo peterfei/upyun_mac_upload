@@ -89,12 +89,26 @@ func NotificationMessage(message: String, informative: String? = nil, isSuccess:
     notificationCenter.scheduleNotification(notification)
     
 }
+
+var autoUp: Bool {
+get {
+    if let autoUp = NSUserDefaults.standardUserDefaults().valueForKey("autoUp") {
+        return autoUp as! Bool
+    }
+    return false
+}
+set {
+    NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: "autoUp")
+}
+}
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     let pasteboardObserver = PasteboardObserver()
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var uploadMenuItem: NSMenuItem!
+    @IBOutlet weak var autoUpItem: NSMenuItem!
+    @IBOutlet weak var MarkdownItem: NSMenuItem!
     lazy var preferencesWindowController: NSWindowController = {
         
         let imageViewController = ImagePreferencesViewController()
@@ -105,6 +119,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return wc
     }()
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        pasteboardObserver.addSubscriber(self)
+        
+        if autoUp {
+            
+            pasteboardObserver.startObserving()
+            autoUpItem.state = 1
+            
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notification), name: "MarkdownState", object: nil)
         // Insert code here to initialize your application
         registerHotKeys()
         pasteboardObserver.addSubscriber(self)
@@ -119,7 +143,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.action = #selector(showMenu)
         statusItem.button?.target = self
     }
-
+    func notification(notification: NSNotification) {
+        
+        if notification.object?.intValue == 0 {
+            MarkdownItem.state = 1
+        }
+        else {
+            MarkdownItem.state = 0
+        }
+        
+    }
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
@@ -161,6 +194,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         case 3:
             // 退出
             NSApp.terminate(nil)
+        case 4:
+            print("click autoMenu")
+            if sender.state == 0 {
+                sender.state = 1
+                pasteboardObserver.startObserving()
+                autoUp = true
+            }
+            else {
+                sender.state = 0
+                pasteboardObserver.stopObserving()
+                autoUp = false
+            }
         default:
             break
         
@@ -238,7 +283,8 @@ extension AppDelegate: NSUserNotificationCenterDelegate, PasteboardObserverSubsc
     }
     
     func pasteboardChanged(pasteboard: NSPasteboard) {
-//        QiniuUpload(pasteboard)
+        print("pasteboardChanged")
+        upload(pasteboard)
         
     }
     

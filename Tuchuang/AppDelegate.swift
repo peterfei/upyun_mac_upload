@@ -267,7 +267,7 @@ extension AppDelegate: NSUserNotificationCenterDelegate, PasteboardObserverSubsc
             switch hkCom.id {
             case UInt32(kVK_ANSI_U):
                 let pboard = NSPasteboard.generalPasteboard()
-            //                QiniuUpload(pboard)
+                upload(pboard)
             case UInt32(kVK_ANSI_M):
                 if linkType == 0 {
                     linkType = 1

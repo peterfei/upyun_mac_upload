@@ -38,6 +38,8 @@ func upload(pboard:NSPasteboard) -> Void {
                       saveKey: fileName,
                       otherParameters: nil,
                       success: { (response, responseObject) in
+                        statusItem.button?.image = NSImage(named: "StatusIcon")
+                        statusItem.button?.image?.template = true
 //                        print("success: \(responseObject["path"]!)")
 //                        let key = responseObject["path"]! as! String
                         NSPasteboard.generalPasteboard().clearContents()
@@ -59,9 +61,12 @@ func upload(pboard:NSPasteboard) -> Void {
                 },
                       progress: { (completedBytesCount, totalBytesCount) in
                         print("上传进程: \(completedBytesCount) | \(totalBytesCount)")
-                        print("上传百分比: \(Int(completedBytesCount/totalBytesCount)*10)")
-//                        statusItem.button?.image = NSImage(named: "loading-\(Int(completedBytesCount/totalBytesCount)*100)")
-//                        statusItem.button?.image?.template = true
+                        print("上传百分比: \((completedBytesCount*10/totalBytesCount))")
+//                        (completedBytesCount/totalBytesCount)*10
+//                        let percentagevalue: Double = .roundTo0f
+
+                        statusItem.button?.image = NSImage(named: "loading-\((completedBytesCount*10/totalBytesCount))")
+                        statusItem.button?.image?.template = true
             })
             
         }

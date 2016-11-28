@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tuchuang/AppDelegate.swift"
-            timestampString = "501993495.228612"
+            timestampString = "502012516.586025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "upload(_:)"
             landmarkType = "7">
             <Actions>

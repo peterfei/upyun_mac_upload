@@ -13,7 +13,82 @@ import Carbon
 var appDelegate: NSObject?
 var statusItem: NSStatusItem!
 var imagesCacheArr: [[String: AnyObject]] = Array()
+func arc() -> UInt32 { return arc4random() % 100000 }
+var picUrlPrefix = "http://patienthome.b0.upaiyun.com/"
 
+func upload(pboard:NSPasteboard) -> Void {
+    let files: NSArray? = pboard.propertyListForType(NSFilenamesPboardType) as? NSArray
+//    let data:NSData = (pboard.propertyListForType(NSFilenamesPboardType) as? NSData)!
+    let up = UPBlockUploader()
+    
+
+    if let files = files {
+        statusItem.button?.image = NSImage(named: "StatusIcon")
+        statusItem.button?.image?.template = true
+        let filePath:String? = files.firstObject as? String
+        if let filePath = filePath {
+            let fileName = getDateString() + "\(arc())" + NSString(string: filePath).lastPathComponent
+            guard let _ = NSImage(contentsOfFile: files.firstObject as! String) else {
+                return
+            }
+            up.upload(filePath,
+                      fileName: fileName,
+                      apiKey: "W6RALa1sP37BjE2FEXfMrjINTOA=",
+                      bucketName: "patienthome",
+                      saveKey: fileName,
+                      otherParameters: nil,
+                      success: { (response, responseObject) in
+//                        print("success: \(responseObject["path"]!)")
+//                        let key = responseObject["path"]! as! String
+                        NSPasteboard.generalPasteboard().clearContents()
+                        NSPasteboard.generalPasteboard()
+                        NSPasteboard.generalPasteboard().setString("![" + NSString(string: filePath).lastPathComponent + "](" + picUrlPrefix + fileName + ")", forType: NSStringPboardType)
+                        NotificationMessage("上传图片成功", isSuccess: true)
+                        var picUrl: String!
+                        if linkType == 0 {
+                            picUrl = "![" + fileName + "](" + picUrlPrefix + fileName + ")"
+                        }
+                        else {
+                            picUrl = picUrlPrefix + fileName
+                        }
+                        NSPasteboard.generalPasteboard().setString(picUrl, forType: NSStringPboardType)
+                },
+                      failure: { (error, response, responseObject) in
+                        print("failure: \(error)")
+                        print("failure: \(responseObject)")
+                },
+                      progress: { (completedBytesCount, totalBytesCount) in
+                        print("上传进程: \(completedBytesCount) | \(totalBytesCount)")
+                        print("上传百分比: \(Int(completedBytesCount/totalBytesCount)*10)")
+//                        statusItem.button?.image = NSImage(named: "loading-\(Int(completedBytesCount/totalBytesCount)*100)")
+//                        statusItem.button?.image?.template = true
+            })
+            
+        }
+        
+        
+    }
+    
+
+}
+func NotificationMessage(message: String, informative: String? = nil, isSuccess: Bool = false) {
+    
+    let notification = NSUserNotification()
+    let notificationCenter = NSUserNotificationCenter.defaultUserNotificationCenter()
+    notificationCenter.delegate = appDelegate as? NSUserNotificationCenterDelegate
+    notification.title = message
+    notification.informativeText = informative
+    if isSuccess {
+        notification.contentImage = NSImage(named: "success")
+        notification.informativeText = "链接已经保存在剪贴板里，可以直接粘贴"
+    } else {
+        notification.contentImage = NSImage(named: "Failure")
+    }
+    
+    notification.soundName = NSUserNotificationDefaultSoundName;
+    notificationCenter.scheduleNotification(notification)
+    
+}
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     let pasteboardObserver = PasteboardObserver()
@@ -75,7 +150,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func statusMenuClicked(sender: NSMenuItem) {
         switch sender.tag{
         case 1:
-            break
+            let pboard = NSPasteboard.generalPasteboard()
+            upload(pboard)
         case 2:
             // 设置
             print("click preferencesWindow")
@@ -227,3 +303,5 @@ extension AppDelegate: NSUserNotificationCenterDelegate, PasteboardObserverSubsc
     }
     
 }
+
+

@@ -15,6 +15,11 @@
 		8860F06F1DE8369700D9CD01 /* GeneralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8860F06E1DE8369700D9CD01 /* GeneralViewController.xib */; };
 		8860F0711DE841A800D9CD01 /* PasteboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F0701DE841A800D9CD01 /* PasteboardObserver.swift */; };
 		8860F0731DE846C600D9CD01 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F0721DE846C600D9CD01 /* AppHelper.swift */; };
+		8866868D1DE98722006877E4 /* UpYunSwiftSDK in Resources */ = {isa = PBXBuildFile; fileRef = 8866868C1DE98722006877E4 /* UpYunSwiftSDK */; };
+		886686951DE9884A006877E4 /* UPBlockUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886686911DE9884A006877E4 /* UPBlockUploader.swift */; };
+		886686961DE9884A006877E4 /* UPFormUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886686921DE9884A006877E4 /* UPFormUploader.swift */; };
+		886686971DE9884A006877E4 /* UPHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886686931DE9884A006877E4 /* UPHTTPClient.swift */; };
+		886686981DE9884A006877E4 /* UPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886686941DE9884A006877E4 /* UPUtils.swift */; };
 		88D61AC21DE7FAB500B3532E /* ImagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D61AC11DE7FAB500B3532E /* ImagePreferencesViewController.swift */; };
 		BE527B349F7B08679D936010 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A70FBBAF352AB1870D1DEC /* Pods___.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +36,11 @@
 		8860F06E1DE8369700D9CD01 /* GeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralViewController.xib; sourceTree = "<group>"; };
 		8860F0701DE841A800D9CD01 /* PasteboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardObserver.swift; sourceTree = "<group>"; };
 		8860F0721DE846C600D9CD01 /* AppHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
+		8866868C1DE98722006877E4 /* UpYunSwiftSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UpYunSwiftSDK; path = /Users/liufei/projects/ios/Tuchuang/Tuchuang/UpYunSwiftSDK; sourceTree = "<absolute>"; };
+		886686911DE9884A006877E4 /* UPBlockUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPBlockUploader.swift; sourceTree = "<group>"; };
+		886686921DE9884A006877E4 /* UPFormUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPFormUploader.swift; sourceTree = "<group>"; };
+		886686931DE9884A006877E4 /* UPHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPHTTPClient.swift; sourceTree = "<group>"; };
+		886686941DE9884A006877E4 /* UPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPUtils.swift; sourceTree = "<group>"; };
 		88D61AC11DE7FAB500B3532E /* ImagePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreferencesViewController.swift; sourceTree = "<group>"; };
 		D28CC84E54D66F4C7D5821CA /* Pods-图床.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-图床.debug.xcconfig"; path = "Pods/Target Support Files/Pods-图床/Pods-图床.debug.xcconfig"; sourceTree = "<group>"; };
 		D3A70FBBAF352AB1870D1DEC /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +70,7 @@
 		8832C9B51DE7D26400679FC7 = {
 			isa = PBXGroup;
 			children = (
+				886686901DE9884A006877E4 /* UpYunSwiftSDK */,
 				8832C9C01DE7D26400679FC7 /* Tuchuang */,
 				8832C9BF1DE7D26400679FC7 /* Products */,
 				4317795406DB782B0E03F128 /* Pods */,
@@ -90,6 +101,18 @@
 				8860F0721DE846C600D9CD01 /* AppHelper.swift */,
 			);
 			path = Tuchuang;
+			sourceTree = "<group>";
+		};
+		886686901DE9884A006877E4 /* UpYunSwiftSDK */ = {
+			isa = PBXGroup;
+			children = (
+				886686911DE9884A006877E4 /* UPBlockUploader.swift */,
+				886686921DE9884A006877E4 /* UPFormUploader.swift */,
+				886686931DE9884A006877E4 /* UPHTTPClient.swift */,
+				886686941DE9884A006877E4 /* UPUtils.swift */,
+			);
+			name = UpYunSwiftSDK;
+			path = Tuchuang/UpYunSwiftSDK;
 			sourceTree = "<group>";
 		};
 		97FBCF975C89AD92DD8A2534 /* Frameworks */ = {
@@ -164,6 +187,7 @@
 				8832C9C41DE7D26400679FC7 /* Assets.xcassets in Resources */,
 				8832C9C71DE7D26400679FC7 /* MainMenu.xib in Resources */,
 				8860F06D1DE8082A00D9CD01 /* ImagePreferencesViewController.xib in Resources */,
+				8866868D1DE98722006877E4 /* UpYunSwiftSDK in Resources */,
 				8860F06F1DE8369700D9CD01 /* GeneralViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,9 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886686951DE9884A006877E4 /* UPBlockUploader.swift in Sources */,
+				886686981DE9884A006877E4 /* UPUtils.swift in Sources */,
+				886686971DE9884A006877E4 /* UPHTTPClient.swift in Sources */,
 				8860F0731DE846C600D9CD01 /* AppHelper.swift in Sources */,
 				8860F0711DE841A800D9CD01 /* PasteboardObserver.swift in Sources */,
 				8860F0691DE8050300D9CD01 /* GeneralViewController.swift in Sources */,
+				886686961DE9884A006877E4 /* UPFormUploader.swift in Sources */,
 				8832C9C21DE7D26400679FC7 /* AppDelegate.swift in Sources */,
 				88D61AC21DE7FAB500B3532E /* ImagePreferencesViewController.swift in Sources */,
 			);
@@ -338,6 +366,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterfei.Tuchuang;
 				PRODUCT_NAME = "图床";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -352,6 +381,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterfei.Tuchuang;
 				PRODUCT_NAME = "图床";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="ImagePreferencesViewController" customModule="图床" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="ImagePreferencesViewController" customModule="up云图床" customModuleProvider="target">
             <connections>
                 <outlet property="accessKeyTextField" destination="AiQ-jN-YaK" id="iwu-nk-k3K"/>
                 <outlet property="bucketTextField" destination="i5z-Na-dG9" id="Yzm-AK-ev1"/>
@@ -25,7 +25,7 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="95" id="jyt-QE-mqY"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="支持七牛云" id="TbW-CI-Sip">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="支持又拍云" id="TbW-CI-Sip">
                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

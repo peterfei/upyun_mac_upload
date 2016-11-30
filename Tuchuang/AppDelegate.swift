@@ -15,13 +15,81 @@ var statusItem: NSStatusItem!
 var imagesCacheArr: [[String: AnyObject]] = Array()
 func arc() -> UInt32 { return arc4random() % 100000 }
 var picUrlPrefix = "http://patienthome.b0.upaiyun.com/"
+var apiKeyVal = ""
+var bucketVal = ""
+var isUseSet: Bool {
+get {
+    if let isUseSet = NSUserDefaults.standardUserDefaults().valueForKey("isUseSet") {
+        return isUseSet as! Bool
+    }
+    return false
+}
+set {
+    NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: "isUseSet")
+}
 
+}
+var urlPrefix: String {
+get {
+    if let urlPrefix = NSUserDefaults.standardUserDefaults().valueForKey("urlPrefix") {
+        return urlPrefix as! String
+    }
+    return ""
+}
+set {
+    NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: "urlPrefix")
+}
+
+}
+
+var apiKey: String {
+get {
+    if let apiKey = NSUserDefaults.standardUserDefaults().valueForKey("apiKey") {
+        return apiKey as! String
+    }
+    return ""
+}
+set {
+    NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: "apiKey")
+}
+
+}
+
+
+
+var bucket: String {
+get {
+    if let bucket = NSUserDefaults.standardUserDefaults().valueForKey("bucket") {
+        return bucket as! String
+    }
+    return ""
+}
+set {
+    NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: "bucket")
+}
+
+}
 func upload(pboard:NSPasteboard) -> Void {
+    
+    // 是否自定义
+    if isUseSet {
+
+        picUrlPrefix = urlPrefix
+        apiKeyVal = apiKey
+        bucketVal = bucket
+        
+    } else {
+        picUrlPrefix = "http://7xqmjb.com1.z0.glb.clouddn.com/"
+        apiKeyVal = "W6RALa1sP37BjE2FEXfMrjINTOA="
+        bucketVal = "patienthome"
+    }
+    
     let files: NSArray? = pboard.propertyListForType(NSFilenamesPboardType) as? NSArray
 //    let data:NSData = (pboard.propertyListForType(NSFilenamesPboardType) as? NSData)!
     let up = UPBlockUploader()
     
-
+    
+    
     if let files = files {
         statusItem.button?.image = NSImage(named: "StatusIcon")
         statusItem.button?.image?.template = true
@@ -31,10 +99,13 @@ func upload(pboard:NSPasteboard) -> Void {
             guard let _ = NSImage(contentsOfFile: files.firstObject as! String) else {
                 return
             }
+            print("url is \(picUrlPrefix)")
+            print("apiKey is \(apiKeyVal)")
+            print("bucket is \(bucketVal)")
             up.upload(filePath,
                       fileName: fileName,
-                      apiKey: "W6RALa1sP37BjE2FEXfMrjINTOA=",
-                      bucketName: "patienthome",
+                      apiKey: apiKeyVal,
+                      bucketName: bucketVal,
                       saveKey: fileName,
                       otherParameters: nil,
                       success: { (response, responseObject) in

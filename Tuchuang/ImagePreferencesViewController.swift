@@ -18,11 +18,10 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
     var window: NSWindow?
     
     @IBOutlet weak var statusLabel: NSTextField!
-    @IBOutlet weak var accessKeyTextField: NSTextField!
+    @IBOutlet weak var apiKeyTextField: NSTextField!
     
-    @IBOutlet weak var secretKeyTextField: NSTextField!
     
-    @IBOutlet weak var bucketTextField: NSTextField!
+    @IBOutlet weak var bucketNameTextField: NSTextField!
     
     @IBOutlet weak var urlPrefixTextField: NSTextField!
     
@@ -30,30 +29,28 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if isUseSet {
-//            statusLabel.cell?.title = "目前使用自定义图床"
-//            statusLabel.textColor = .magentaColor()
-//        } else {
-//            statusLabel.cell?.title = "目前使用默认图床"
-//            statusLabel.textColor = .redColor()
-//        }
+        if isUseSet {
+            statusLabel.cell?.title = "目前使用自定义图床"
+            statusLabel.textColor = .magentaColor()
+        } else {
+            statusLabel.cell?.title = "目前使用默认图床"
+            statusLabel.textColor = .redColor()
+        }
         
-//        accessKeyTextField.cell?.title = accessKey
-//        secretKeyTextField.cell?.title = secretKey
-//        bucketTextField.cell?.title = bucket
-//        urlPrefixTextField.cell?.title = urlPrefix
+        apiKeyTextField.cell?.title = apiKey
+        bucketNameTextField.cell?.title = bucket
+        urlPrefixTextField.cell?.title = urlPrefix
     }
     @IBAction func setDefault(sender: AnyObject) {
-//        isUseSet = false
+        isUseSet = false
         statusLabel.cell?.title = "目前使用默认图床"
         statusLabel.textColor = .redColor()
         
     }
     
-    @IBAction func setQiniuConfig(sender: AnyObject) {
-        if (accessKeyTextField.cell?.title.characters.count == 0 ||
-            secretKeyTextField.cell?.title.characters.count == 0 ||
-            bucketTextField.cell?.title.characters.count == 0 ||
+    @IBAction func setUpYunConfig(sender: AnyObject) {
+        if (apiKeyTextField.cell?.title.characters.count == 0 ||
+            bucketNameTextField.cell?.title.characters.count == 0 ||
             urlPrefixTextField.cell?.title.characters.count == 0) {
             showAlert("有配置信息未填写", informative: "请仔细填写")
             return
@@ -69,36 +66,39 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
             urlPrefixTextField.cell?.title = (urlPrefixTextField.cell?.title)! + "/"
         }
         
-//        let ack = (accessKeyTextField.cell?.title)!
-//        let sek = (secretKeyTextField.cell?.title)!
-//        let bck = (bucketTextField.cell?.title)!
+        let ak = (apiKeyTextField.cell?.title)!
+        let bck = (bucketNameTextField.cell?.title)!
         
-//        GCQiniuUploadManager.sharedInstance().registerWithScope(bck, accessKey: ack, secretKey: sek)
-//        GCQiniuUploadManager.sharedInstance().createToken()
-//        let ts = "1"
-//        checkButton.title = "验证中"
-//        checkButton.enabled = false
-//        GCQiniuUploadManager.sharedInstance().uploadData(ts.dataUsingEncoding(NSUTF8StringEncoding), progress: { (progress) in
-//            
-//        }) { [weak self](error, string, code) in
-//            self?.checkButton.enabled = true
-//            self?.checkButton.title = "验证配置"
-//            if error == nil {
-//                self?.showAlert("验证成功", informative: "配置成功。")
-//                accessKey = (self?.accessKeyTextField.cell?.title)!
-//                secretKey = (self?.secretKeyTextField.cell?.title)!
-//                bucket = (self?.bucketTextField.cell?.title)!
-//                urlPrefix = (self?.urlPrefixTextField.cell?.title)!
-//                self?.statusLabel.cell?.title = "目前使用自定义图床"
-//                self?.statusLabel.textColor = .magentaColor()
-//                isUseSet = true
-//                
-//            }
-//            else {
-//                self?.showAlert("验证失败", informative: "验证失败，请仔细填写信息。")
-//            }
-//            
-//        }
+
+        let ts = "1"
+        checkButton.title = "验证中"
+        checkButton.enabled = false
+        let up = UPFormUploader()
+        up.upload(ts.dataUsingEncoding(NSUTF8StringEncoding),
+                  fileName: "1",
+                  formAPIKey: ak,
+                  bucketName: bck,
+                  saveKey: "1",
+                  otherParameters: nil,
+                  success: {[weak self](response, responseObject) in
+                    print("success \(responseObject)")
+                    self?.checkButton.enabled = true
+                    self?.checkButton.title = "验证配置"
+                    self?.showAlert("验证成功", informative: "配置成功。")
+                    apiKey = (self?.apiKeyTextField.cell?.title)!
+                    bucket = (self?.bucketNameTextField.cell?.title)!
+                    urlPrefix = (self?.urlPrefixTextField.cell?.title)!
+                    self?.statusLabel.cell?.title = "目前使用自定义图床"
+                    self?.statusLabel.textColor = .magentaColor()
+                    isUseSet = true
+                  },
+                  failure: { (error, response, responseObject) in
+                    print("failure: \(error)")
+                    print("failure: \(responseObject)")
+                  },
+                  progress: {(completedBytesCount, totalBytesCount) in
+            })
+
     }
     
     func showAlert(message: String, informative: String) {

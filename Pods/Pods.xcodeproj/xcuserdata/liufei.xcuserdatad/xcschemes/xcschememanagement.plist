@@ -19,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-图床.xcscheme</key>
+		<key>Pods-up云图床.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,17 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0CCA90BD641A9A62034C652D7F6ED3FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2F9E840843FFD7E224C5E8FCE64AFC84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E603B96725B2E58F8DFDE2B1F0E01CC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8F68BD1533E8DED6A972D5596C68BF07</key>
+		<key>3757873B4035DB752A31304A26825C47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4575B2863911AD2B301699C87F20496</key>
+		<key>E35271B80F93B3F121452B5145EAAD25</key>
 		<dict>
 			<key>primary</key>
 			<true/>

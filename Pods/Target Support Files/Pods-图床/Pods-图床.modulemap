@@ -1,6 +1,0 @@
-framework module Pods___ {
-  umbrella header "Pods-图床-umbrella.h"
-
-  export *
-  module * { export * }
-}

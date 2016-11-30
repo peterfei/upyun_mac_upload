@@ -7,6 +7,6 @@ def pods
    pod 'AFNetworking','2.6.3'
 end
 
-target '图床'  do
+target 'up云图床'  do
     pods
 end

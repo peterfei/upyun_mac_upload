@@ -15,17 +15,17 @@
 		8860F06F1DE8369700D9CD01 /* GeneralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8860F06E1DE8369700D9CD01 /* GeneralViewController.xib */; };
 		8860F0711DE841A800D9CD01 /* PasteboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F0701DE841A800D9CD01 /* PasteboardObserver.swift */; };
 		8860F0731DE846C600D9CD01 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8860F0721DE846C600D9CD01 /* AppHelper.swift */; };
-		8866868D1DE98722006877E4 /* UpYunSwiftSDK in Resources */ = {isa = PBXBuildFile; fileRef = 8866868C1DE98722006877E4 /* UpYunSwiftSDK */; };
-		886686951DE9884A006877E4 /* UPBlockUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886686911DE9884A006877E4 /* UPBlockUploader.swift */; };
-		886686961DE9884A006877E4 /* UPFormUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886686921DE9884A006877E4 /* UPFormUploader.swift */; };
-		886686971DE9884A006877E4 /* UPHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886686931DE9884A006877E4 /* UPHTTPClient.swift */; };
-		886686981DE9884A006877E4 /* UPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886686941DE9884A006877E4 /* UPUtils.swift */; };
+		887DF7EF1DEE7AAB0047ADE3 /* UPBlockUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DF7E71DEE7A630047ADE3 /* UPBlockUploader.swift */; };
+		887DF7F01DEE7AAB0047ADE3 /* UPFormUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DF7E81DEE7A630047ADE3 /* UPFormUploader.swift */; };
+		887DF7F11DEE7AAB0047ADE3 /* UPHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DF7E91DEE7A630047ADE3 /* UPHTTPClient.swift */; };
+		887DF7F21DEE7AAB0047ADE3 /* UPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DF7EA1DEE7A630047ADE3 /* UPUtils.swift */; };
 		88D61AC21DE7FAB500B3532E /* ImagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D61AC11DE7FAB500B3532E /* ImagePreferencesViewController.swift */; };
-		BE527B349F7B08679D936010 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A70FBBAF352AB1870D1DEC /* Pods___.framework */; };
+		916B51E1F992C7F769735224 /* Pods_up___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93B5F7A8F6E1FFEE929A5A1 /* Pods_up___.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1829087686CBD3008EFBDCE6 /* Pods-图床.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-图床.release.xcconfig"; path = "Pods/Target Support Files/Pods-图床/Pods-图床.release.xcconfig"; sourceTree = "<group>"; };
+		1FBC8466B98B9B5DA960ED54 /* Pods-up云图床.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-up云图床.debug.xcconfig"; path = "Pods/Target Support Files/Pods-up云图床/Pods-up云图床.debug.xcconfig"; sourceTree = "<group>"; };
+		3ECA7346807831B5354B8408 /* Pods-up云图床.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-up云图床.release.xcconfig"; path = "Pods/Target Support Files/Pods-up云图床/Pods-up云图床.release.xcconfig"; sourceTree = "<group>"; };
 		8832C9BE1DE7D26400679FC7 /* up云图床.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "up云图床.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8832C9C11DE7D26400679FC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8832C9C31DE7D26400679FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,14 +36,13 @@
 		8860F06E1DE8369700D9CD01 /* GeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralViewController.xib; sourceTree = "<group>"; };
 		8860F0701DE841A800D9CD01 /* PasteboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardObserver.swift; sourceTree = "<group>"; };
 		8860F0721DE846C600D9CD01 /* AppHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
-		8866868C1DE98722006877E4 /* UpYunSwiftSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UpYunSwiftSDK; path = /Users/liufei/projects/ios/Tuchuang/Tuchuang/UpYunSwiftSDK; sourceTree = "<absolute>"; };
-		886686911DE9884A006877E4 /* UPBlockUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPBlockUploader.swift; sourceTree = "<group>"; };
-		886686921DE9884A006877E4 /* UPFormUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPFormUploader.swift; sourceTree = "<group>"; };
-		886686931DE9884A006877E4 /* UPHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPHTTPClient.swift; sourceTree = "<group>"; };
-		886686941DE9884A006877E4 /* UPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPUtils.swift; sourceTree = "<group>"; };
+		887DF7E71DEE7A630047ADE3 /* UPBlockUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPBlockUploader.swift; sourceTree = "<group>"; };
+		887DF7E81DEE7A630047ADE3 /* UPFormUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPFormUploader.swift; sourceTree = "<group>"; };
+		887DF7E91DEE7A630047ADE3 /* UPHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPHTTPClient.swift; sourceTree = "<group>"; };
+		887DF7EA1DEE7A630047ADE3 /* UPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPUtils.swift; sourceTree = "<group>"; };
+		887DF7F31DEE7AD10047ADE3 /* up云图床.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "up云图床.entitlements"; sourceTree = "<group>"; };
 		88D61AC11DE7FAB500B3532E /* ImagePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreferencesViewController.swift; sourceTree = "<group>"; };
-		D28CC84E54D66F4C7D5821CA /* Pods-图床.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-图床.debug.xcconfig"; path = "Pods/Target Support Files/Pods-图床/Pods-图床.debug.xcconfig"; sourceTree = "<group>"; };
-		D3A70FBBAF352AB1870D1DEC /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93B5F7A8F6E1FFEE929A5A1 /* Pods_up___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_up___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE527B349F7B08679D936010 /* Pods___.framework in Frameworks */,
+				916B51E1F992C7F769735224 /* Pods_up___.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +60,8 @@
 		4317795406DB782B0E03F128 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D28CC84E54D66F4C7D5821CA /* Pods-图床.debug.xcconfig */,
-				1829087686CBD3008EFBDCE6 /* Pods-图床.release.xcconfig */,
+				1FBC8466B98B9B5DA960ED54 /* Pods-up云图床.debug.xcconfig */,
+				3ECA7346807831B5354B8408 /* Pods-up云图床.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -70,7 +69,8 @@
 		8832C9B51DE7D26400679FC7 = {
 			isa = PBXGroup;
 			children = (
-				886686901DE9884A006877E4 /* UpYunSwiftSDK */,
+				887DF7F31DEE7AD10047ADE3 /* up云图床.entitlements */,
+				887DF7E61DEE7A630047ADE3 /* UpYunSwiftSDK */,
 				8832C9C01DE7D26400679FC7 /* Tuchuang */,
 				8832C9BF1DE7D26400679FC7 /* Products */,
 				4317795406DB782B0E03F128 /* Pods */,
@@ -103,13 +103,13 @@
 			path = Tuchuang;
 			sourceTree = "<group>";
 		};
-		886686901DE9884A006877E4 /* UpYunSwiftSDK */ = {
+		887DF7E61DEE7A630047ADE3 /* UpYunSwiftSDK */ = {
 			isa = PBXGroup;
 			children = (
-				886686911DE9884A006877E4 /* UPBlockUploader.swift */,
-				886686921DE9884A006877E4 /* UPFormUploader.swift */,
-				886686931DE9884A006877E4 /* UPHTTPClient.swift */,
-				886686941DE9884A006877E4 /* UPUtils.swift */,
+				887DF7E71DEE7A630047ADE3 /* UPBlockUploader.swift */,
+				887DF7E81DEE7A630047ADE3 /* UPFormUploader.swift */,
+				887DF7E91DEE7A630047ADE3 /* UPHTTPClient.swift */,
+				887DF7EA1DEE7A630047ADE3 /* UPUtils.swift */,
 			);
 			name = UpYunSwiftSDK;
 			path = Tuchuang/UpYunSwiftSDK;
@@ -118,7 +118,7 @@
 		97FBCF975C89AD92DD8A2534 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D3A70FBBAF352AB1870D1DEC /* Pods___.framework */,
+				B93B5F7A8F6E1FFEE929A5A1 /* Pods_up___.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +158,11 @@
 				TargetAttributes = {
 					8832C9BD1DE7D26400679FC7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -187,7 +192,6 @@
 				8832C9C41DE7D26400679FC7 /* Assets.xcassets in Resources */,
 				8832C9C71DE7D26400679FC7 /* MainMenu.xib in Resources */,
 				8860F06D1DE8082A00D9CD01 /* ImagePreferencesViewController.xib in Resources */,
-				8866868D1DE98722006877E4 /* UpYunSwiftSDK in Resources */,
 				8860F06F1DE8369700D9CD01 /* GeneralViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +211,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-图床/Pods-图床-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-up云图床/Pods-up云图床-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BA2959BD80378AE9DCBBA7BF /* [CP] Check Pods Manifest.lock */ = {
@@ -237,7 +241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-图床/Pods-图床-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-up云图床/Pods-up云图床-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -247,13 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				886686951DE9884A006877E4 /* UPBlockUploader.swift in Sources */,
-				886686981DE9884A006877E4 /* UPUtils.swift in Sources */,
-				886686971DE9884A006877E4 /* UPHTTPClient.swift in Sources */,
+				887DF7EF1DEE7AAB0047ADE3 /* UPBlockUploader.swift in Sources */,
+				887DF7F01DEE7AAB0047ADE3 /* UPFormUploader.swift in Sources */,
+				887DF7F11DEE7AAB0047ADE3 /* UPHTTPClient.swift in Sources */,
+				887DF7F21DEE7AAB0047ADE3 /* UPUtils.swift in Sources */,
 				8860F0731DE846C600D9CD01 /* AppHelper.swift in Sources */,
 				8860F0711DE841A800D9CD01 /* PasteboardObserver.swift in Sources */,
 				8860F0691DE8050300D9CD01 /* GeneralViewController.swift in Sources */,
-				886686961DE9884A006877E4 /* UPFormUploader.swift in Sources */,
 				8832C9C21DE7D26400679FC7 /* AppDelegate.swift in Sources */,
 				88D61AC21DE7FAB500B3532E /* ImagePreferencesViewController.swift in Sources */,
 			);
@@ -357,9 +361,11 @@
 		};
 		8832C9CC1DE7D26400679FC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D28CC84E54D66F4C7D5821CA /* Pods-图床.debug.xcconfig */;
+			baseConfigurationReference = 1FBC8466B98B9B5DA960ED54 /* Pods-up云图床.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "up云图床.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tuchuang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -372,9 +378,11 @@
 		};
 		8832C9CD1DE7D26400679FC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1829087686CBD3008EFBDCE6 /* Pods-图床.release.xcconfig */;
+			baseConfigurationReference = 3ECA7346807831B5354B8408 /* Pods-up云图床.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "up云图床.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tuchuang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

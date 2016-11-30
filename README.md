@@ -4,4 +4,4 @@ OS X10.11以上
 xcode 7.3.1
 ####上传图片到图床，然后直接生成图片链接到剪贴板(目前仅支持upyun)
 ###如果你觉得好，请Star✨下
-![2016113076333demo.gif](http://photoblog.b0.aicdn.com/2016113076333demo.gif)
+![201611305328demo.gif](http://photoblog.b0.upaiyun.com/201611305328demo.gif)

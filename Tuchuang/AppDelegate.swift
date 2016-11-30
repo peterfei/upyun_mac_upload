@@ -79,7 +79,7 @@ func upload(pboard:NSPasteboard) -> Void {
         bucketVal = bucket
         
     } else {
-        picUrlPrefix = "http://7xqmjb.com1.z0.glb.clouddn.com/"
+        picUrlPrefix = "http://patienthome.b0.upaiyun.com/"
         apiKeyVal = "W6RALa1sP37BjE2FEXfMrjINTOA="
         bucketVal = "patienthome"
     }

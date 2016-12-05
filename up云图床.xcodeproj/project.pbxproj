@@ -158,6 +158,7 @@
 				TargetAttributes = {
 					8832C9BD1DE7D26400679FC7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -373,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterfei.Tuchuang;
 				PRODUCT_NAME = "up云图床";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -390,6 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterfei.Tuchuang;
 				PRODUCT_NAME = "up云图床";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
